@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Affective HCI Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Session 1: Hero Introduction -->
+      <section class="session hero-session">
+        <div class="hero-content">
+          <h2 class="session-title">Session 1: Hero Introduction</h2>
+          <p class="session-description">
+            This project demonstrates the affective aspect of Human-Computer
+            Interaction (HCI). The system interacts with users using text,
+            colors, shapes, and sounds to provide feedback. Each interaction is
+            designed to respond to user behavior in an emotional and intuitive
+            way. The goal is to show how computers can adapt and communicate
+            more naturally with humans.
+          </p>
+        </div>
+      </section>
+
+      <!-- Session 2: Text HCI -->
+      <section class="session text-session">
+        <div class="text-hci-container">
+          <h2 class="session-title">Session 2: Text HCI</h2>
+          <p class="session-description">
+            Enter your email and password. As you type your password,
+            instructions will appear to guide proper input.
+          </p>
+
+          <form class="text-hci-form">
+            <div class="form-group">
+              <label for="email-input" class="form-label">Email:</label>
+              <input
+                type="email"
+                id="email-input"
+                class="form-input"
+                placeholder="Enter your email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password-input" class="form-label">Password:</label>
+              <input
+                type="password"
+                id="password-input"
+                class="form-input"
+                placeholder="Enter your password"
+              />
+              <div id="password-instructions" class="instructions"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Session 3: Text + Color HCI -->
+      <section class="session color-session">
+        <div class="color-hci-container">
+          <h2 class="session-title">Session 3: Text & Color HCI</h2>
+          <p class="session-description">
+            Enter your email and password. Hover over the submit button to see
+            color feedback, and click it to simulate login.
+          </p>
+
+          <form class="color-hci-form">
+            <div class="form-group">
+              <label for="color-email-input" class="form-label">Email:</label>
+              <input
+                type="email"
+                id="color-email-input"
+                class="form-input"
+                placeholder="Enter your email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="color-password-input" class="form-label"
+                >Password:</label
+              >
+              <input
+                type="password"
+                id="color-password-input"
+                class="form-input"
+                placeholder="Enter your password"
+              />
+              <!-- <div name="password-instructions" class="instructions"></div> -->
+            </div>
+
+            <button type="button" id="color-submit-btn" class="submit-btn">
+              Submit
+            </button>
+            <div id="color-feedback" class="text-feedback"></div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Session 4: Form HCI -->
+      <section class="session form-session">
+        <div class="form-hci-container">
+          <h2 class="session-title">Session 4: Form HCI</h2>
+          <p class="session-description">
+            Your email will be displayed below. Hover over the delete button to
+            see form-based visual feedback. Click it to see a dialog box asking
+            for confirmation.
+          </p>
+
+          <div class="account-display">
+            <span id="displayed-email" class="displayed-email"
+              >Email: <span id="user-email-text"></span
+            ></span>
+            <br /><br />
+            <button type="button" id="delete-account-btn" class="delete-btn">
+              Delete Account
+            </button>
+          </div>
+
+          <!-- Popup Dialog -->
+          <div id="delete-popup" class="popup">
+            <div class="popup-content">
+              <p id="popup-text">
+                Are you sure you want to delete your account?
+              </p>
+              <button type="button" id="popup-yes-btn" class="popup-btn">
+                Yes
+              </button>
+              <button type="button" id="popup-no-btn" class="popup-btn">
+                No
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Session 5: Sound HCI -->
+      <section class="session sound-session">
+        <div class="sound-hci-container">
+          <h2 class="session-title">Session 5: Sound HCI</h2>
+          <p class="session-description">
+            This section demonstrates how sounds can enhance emotional
+            interaction. Clicking the delete button triggers a popup sound, and
+            clicking Yes or No triggers individual feedback sounds.
+          </p>
+
+          <div class="account-display">
+            <span id="sound-user-email"
+              >Email: <span id="sound-email-text"></span
+            ></span>
+            <br /><br />
+            <button type="button" id="sound-delete-btn" class="delete-btn">
+              Delete Account
+            </button>
+          </div>
+
+          <!-- Popup Dialog -->
+          <div id="sound-popup" class="popup">
+            <div class="popup-content">
+              <p id="sound-popup-text">
+                Are you sure you want to delete your account?
+              </p>
+              <button type="button" id="sound-yes-btn" class="popup-btn">
+                Yes
+              </button>
+              <button type="button" id="sound-no-btn" class="popup-btn">
+                No
+              </button>
+            </div>
+          </div>
+
+          <!-- Audio Elements -->
+          <audio id="popup-sound" src="/audios/popup.wav"></audio>
+          <audio id="delete-sound" src="/audios/delete.wav"></audio>
+          <audio id="no-sound" src="/audios/no.wav"></audio>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+/* ===== Reset & Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  padding: 50px 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+/* ===== Section Titles & Description ===== */
+.session-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.session-description {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Forms ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+  outline: none;
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #68ff8b; /* green */
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #03270b;
+}
+
+.submit-btn:active {
+  background-color: #000; /* black on click */
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #dc3545; /* red */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+  border-radius: 12px;
+}
+
+/* No Button */
+.popup-btn {
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+#popup-no-btn,
+#sound-no-btn {
+  background-color: #007bff; /* blue base */
+  color: white;
+}
+
+#popup-no-btn:hover,
+#sound-no-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Yes Button */
+#popup-yes-btn,
+#sound-yes-btn {
+  background-color: #dc3545; /* red like delete */
+  color: white;
+}
+
+#popup-yes-btn:hover,
+#sound-yes-btn:hover {
+  background-color: #c82333;
+}
+
+/* ===== Text Feedback ===== */
+.text-feedback,
+.instructions {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+}
+
+/* ===== Account Display ===== */
+.account-display {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* ===== Popup Styling ===== */
+.popup {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  min-width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+}
+
+/* ===== Hero Session Styling ===== */
+.hero-session {
+  background-color: #f6e9d1;
+  border-radius: 10px;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .form-group,
+  .hero-content {
+    width: 90%;
+  }
+  button {
+    width: 100%;
+  }
+}
