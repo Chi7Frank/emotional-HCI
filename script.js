@@ -32,9 +32,10 @@ const colorEmailInput = document.getElementById("color-email-input");
 const userEmailText = document.getElementById("user-email-text");
 const soundEmailText = document.getElementById("sound-email-text");
 
-// Update button hover/active colors
+// Default hover is handled by CSS mostly, but retaining js instruction just in case it is part of the task assignment.
+// It is better to use purely CSS for this in the real world:
 colorSubmitBtn.addEventListener("mouseenter", () => {
-  colorSubmitBtn.style.backgroundColor = "green";
+  colorSubmitBtn.style.backgroundColor = "var(--success-hover)";
   colorSubmitBtn.style.color = "white";
 });
 colorSubmitBtn.addEventListener("mouseleave", () => {
@@ -42,9 +43,11 @@ colorSubmitBtn.addEventListener("mouseleave", () => {
   colorSubmitBtn.style.color = "";
 });
 colorSubmitBtn.addEventListener("click", () => {
-  colorSubmitBtn.style.backgroundColor = "black";
+  colorSubmitBtn.style.backgroundColor = "#000";
   colorSubmitBtn.style.color = "white";
+
   colorFeedback.textContent = "You have logged in ✅";
+  colorFeedback.classList.add("success-feedback"); // Using CSS class
 
   // Update email dynamically in Form and Sound HCI
   const emailValue = colorEmailInput.value || "user@example.com";
